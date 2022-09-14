@@ -1,10 +1,10 @@
 /*
  * File: 0-holberton.c
- * Auth: Brennan D Baraban
+ * Auth: Kevin Ongulu
  *
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * main - Prints "-putchar" followed by a new line.
