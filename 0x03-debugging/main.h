@@ -1,6 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/*
+ * File: main.h
+ * Auth: Kevin Ongulu
+ * Desc: Header file containing declarations for all functions
+ *       used in the 0x03-debugging directory.
+ */
+
 #include <stdio.h>
 
 void positive_or_negative(int i);
