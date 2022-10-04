@@ -40,3 +40,4 @@ char *argstostr(int ac, char **av)
 	s[d] = '\0';
 	return (s);
 }
+
