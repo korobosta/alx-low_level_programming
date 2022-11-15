@@ -1,36 +1,36 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-/**
- * *array_range - make  memory for an array
- * @min: int type
- * @max: int type
- * Return:  return pointer to array
+/*
+ * File: 3-array_range.c
+ * Auth: Kevin Ongulu
  */
 
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * array_range - Creates an array of integers ordered
+ *               from min to max, inclusive.
+ * @min: The first value of the array.
+ * @max: The last value of the array.
+ *
+ * Return: If min > max or the function fails - NULL.
+ *         Otherwise - a pointer to the newly created array.
+ */
 int *array_range(int min, int max)
 {
-	int *ptr;
-	int arr;
+	int *array, index, size;
 
 	if (min > max)
-	{
 		return (NULL);
-	}
 
-	ptr = malloc(sizeof(int) * (max - min + 1));
-	if (ptr == NULL)
-	{
+	size = max - min + 1;
+
+	array = malloc(sizeof(int) * size);
+
+	if (array == NULL)
 		return (NULL);
-	}
-	arr = 0;
-	while (min <= max)
-	{
-		ptr[arr] = min;
-		min++;
-		arr++;
-	}
-	return (ptr);
+
+	for (index = 0; index < size; index++)
+		array[index] = min++;
+
+	return (array);
 }
